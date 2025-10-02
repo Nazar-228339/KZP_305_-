@@ -1,25 +1,29 @@
 package KI305.Tsehynka.Lab2;
 
 /**
- * Клас, що описує сидіння в шлюпці.
+ * Клас, що описує сидіння.
  */
 public class Seat {
-    private String capacity; // кількість осіб на сидінні
+    private String name;
 
-    public Seat(String capacity) {
-        this.capacity = capacity;
+    public Seat() {
+        this.name = "Сидіння";
     }
 
-    public String getCapacity() {
-        return capacity;
+    public Seat(String name) {
+        this.name = name;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Сидiння для " + capacity + " особи(ей)";
+        return "Сидіння: " + name;
     }
 }

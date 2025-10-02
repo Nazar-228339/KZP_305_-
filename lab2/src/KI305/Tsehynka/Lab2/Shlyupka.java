@@ -10,44 +10,62 @@ public class Shlyupka {
     private Oar[] oars;
     private Seat[] seats;
 
-    // --- Конструктори ---
+    // Конструктор за замовчуванням (корпус з дерева, 2 весла, 2 сидіння)
     public Shlyupka() {
         this.hull = new Hull("Дерево", 4.5);
         this.oars = new Oar[2];
         this.seats = new Seat[2];
     }
 
+    // Конструктор з параметрами
     public Shlyupka(Hull hull, int oarCount, int seatCount) {
         this.hull = hull;
-        this.oars = new Oar[oarCount];
-        this.seats = new Seat[seatCount];
+        this.oars = new Oar[Math.max(0, oarCount)];
+        this.seats = new Seat[Math.max(0, seatCount)];
     }
 
-    // --- Методи ---
+    public Hull getHull() {
+        return hull;
+    }
+
+    public void setHull(Hull hull) {
+        this.hull = hull;
+    }
+
     public void addOar(int index, Oar oar, Logger logger) throws IOException {
         if (index >= 0 && index < oars.length) {
             oars[index] = oar;
-            logger.log("Додано весло на позицiю " + index);
+            logger.log("Додано весло на позицiю " + index + " (" + oar + ")");
         } else {
-            logger.log("Помилка: неправильний iндекс для додавання весла");
+            logger.log("Помилка: неправильний iндекс для додавання весла: " + index);
         }
     }
 
     public void addSeat(int index, Seat seat, Logger logger) throws IOException {
         if (index >= 0 && index < seats.length) {
             seats[index] = seat;
-            logger.log("Додано сидiння на позицiю " + index);
+            logger.log("Додано сидiння на позицiю " + index + " (" + seat + ")");
         } else {
-            logger.log("Помилка: неправильний iндекс для додавання сидiння");
+            logger.log("Помилка: неправильний iндекс для додавання сидiння: " + index);
         }
     }
 
-    public int getOarsCount() {
-        return oars.length;
+    public void removeOar(int index, Logger logger) throws IOException {
+        if (index >= 0 && index < oars.length && oars[index] != null) {
+            logger.log("Видалено весло з позицiї " + index + " (" + oars[index] + ")");
+            oars[index] = null;
+        } else {
+            logger.log("Помилка при видаленнi весла: позицiя " + index);
+        }
     }
 
-    public int getSeatsCount() {
-        return seats.length;
+    public void removeSeat(int index, Logger logger) throws IOException {
+        if (index >= 0 && index < seats.length && seats[index] != null) {
+            logger.log("Видалено сидiння з позицiї " + index + " (" + seats[index] + ")");
+            seats[index] = null;
+        } else {
+            logger.log("Помилка при видаленнi сидiння: позицiя " + index);
+        }
     }
 
     public void row(Logger logger) throws IOException {
@@ -59,37 +77,23 @@ public class Shlyupka {
     }
 
     public void repairHull(Logger logger) throws IOException {
-        logger.log("Виконано ремонт корпусу шлюпки");
+        logger.log("Виконано ремонт корпусу");
     }
 
-    /**
-     * Видаляє весло з вказаної позиції.
-     */
-    public void removeOar(int index, Logger logger) throws IOException {
-        if (index >= 0 && index < oars.length && oars[index] != null) {
-            oars[index] = null;
-            logger.log("Видалено весло з позицiї " + index);
-        } else {
-            logger.log("Помилка: неправильний iндекс або весло вiдсутнє на позицiї " + index);
-        }
+    // Максимальні місця для весел і сидінь
+    public int getMaxOars() {
+        return oars.length;
     }
 
-    /**
-     * Видаляє сидіння з вказаної позиції.
-     */
-    public void removeSeat(int index, Logger logger) throws IOException {
-        if (index >= 0 && index < seats.length && seats[index] != null) {
-            seats[index] = null;
-            logger.log("Видалено сидiння з позицiї " + index);
-        } else {
-            logger.log("Помилка: неправильний iндекс або сидіння вiдсутнє на позицiї " + index);
-        }
+    public int getMaxSeats() {
+        return seats.length;
     }
 
     @Override
     public String toString() {
-        return "Шлюпка: Корпус з матерiалу: " + hull.getMaterial() +
-               ", довжина: " + hull.getLength() + " м, кiлькiсть весел: " +
-               getOarsCount() + ", кiлькiсть сидiнь: " + getSeatsCount();
+        String hullInfo = (hull != null) ? hull.toString() : "Корпус: вiдсутнiй";
+        return "Шлюпка: " + hullInfo +
+               ", кiлькiсть мiсць для весел: " + oars.length +
+               ", кiлькiсть мiсць для сидiнь: " + seats.length;
     }
 }

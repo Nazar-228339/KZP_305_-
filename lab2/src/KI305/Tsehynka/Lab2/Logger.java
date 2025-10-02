@@ -1,6 +1,8 @@
 package KI305.Tsehynka.Lab2;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 
 /**
@@ -16,10 +18,13 @@ public class Logger implements AutoCloseable {
     public void log(String message) throws IOException {
         writer.write(LocalDateTime.now() + " - " + message);
         writer.newLine();
+        writer.flush();
     }
 
     @Override
     public void close() throws IOException {
-        writer.close();
+        if (writer != null) {
+            writer.close();
+        }
     }
 }

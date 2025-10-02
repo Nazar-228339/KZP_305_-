@@ -6,6 +6,10 @@ package KI305.Tsehynka.Lab2;
 public class Oar {
     private String material;
 
+    public Oar() {
+        this.material = "Невiдомо";
+    }
+
     public Oar(String material) {
         this.material = material;
     }
@@ -20,6 +24,6 @@ public class Oar {
 
     @Override
     public String toString() {
-        return "Весло з матерiалу: " + material;
+        return "Весло (" + material + ")";
     }
 }
