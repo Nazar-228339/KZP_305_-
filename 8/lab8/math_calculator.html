@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module math_calculator</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">math_calculator</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnazar%5Conedrive%5C%D1%80%D0%BE%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D1%96%D0%BB%5C%D0%BA%D0%B7%D0%BF%5Csrc%5Cki305%5Ctsehynka%5Clab8%5Cmath_calculator.py">c:\users\nazar\onedrive\робочий стіл\кзп\src\ki305\tsehynka\lab8\math_calculator.py</a></td></tr></table>
+    <p><span class="code">Модуль&nbsp;для&nbsp;обчислення&nbsp;функції&nbsp;y&nbsp;=&nbsp;1/cos(4x)&nbsp;=&nbsp;sec(4x)<br>
+&nbsp;<br>
+Варіант:&nbsp;26<br>
+Функція:&nbsp;y&nbsp;=&nbsp;1/cos(4x)<br>
+&nbsp;<br>
+Модуль&nbsp;реалізує:<br>
+-&nbsp;Обчислення&nbsp;значень&nbsp;функції&nbsp;для&nbsp;заданого&nbsp;діапазону&nbsp;x<br>
+-&nbsp;Збереження&nbsp;результатів&nbsp;у&nbsp;текстовий&nbsp;файл<br>
+-&nbsp;Збереження&nbsp;результатів&nbsp;у&nbsp;двійковий&nbsp;файл&nbsp;(pickle)<br>
+-&nbsp;Читання&nbsp;даних&nbsp;з&nbsp;текстового&nbsp;файлу<br>
+-&nbsp;Читання&nbsp;даних&nbsp;з&nbsp;двійкового&nbsp;файлу</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="math.html">math</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pickle.html">pickle</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-calculate_function"><strong>calculate_function</strong></a>(x)</dt><dd><span class="code">Обчислює&nbsp;значення&nbsp;функції&nbsp;y&nbsp;=&nbsp;1/cos(4x)<br>
+&nbsp;<br>
+Параметри:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(float):&nbsp;Значення&nbsp;аргументу&nbsp;x<br>
+&nbsp;<br>
+Повертає:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;Значення&nbsp;функції&nbsp;y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None:&nbsp;Якщо&nbsp;cos(4x)&nbsp;=&nbsp;0&nbsp;(функція&nbsp;не&nbsp;визначена)<br>
+&nbsp;<br>
+Виключення:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Якщо&nbsp;функція&nbsp;не&nbsp;визначена&nbsp;в&nbsp;точці&nbsp;x</span></dd></dl>
+ <dl><dt><a name="-display_data"><strong>display_data</strong></a>(data, title='Результати')</dt><dd><span class="code">Виводить&nbsp;дані&nbsp;на&nbsp;екран&nbsp;у&nbsp;форматованому&nbsp;вигляді<br>
+&nbsp;<br>
+Параметри:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(list):&nbsp;Список&nbsp;кортежів&nbsp;(x,&nbsp;y)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str):&nbsp;Заголовок&nbsp;для&nbsp;виводу</span></dd></dl>
+ <dl><dt><a name="-generate_data"><strong>generate_data</strong></a>(x_start, x_end, step)</dt><dd><span class="code">Генерує&nbsp;дані&nbsp;для&nbsp;функції&nbsp;y&nbsp;=&nbsp;1/cos(4x)&nbsp;в&nbsp;заданому&nbsp;діапазоні<br>
+&nbsp;<br>
+Параметри:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x_start&nbsp;(float):&nbsp;Початкове&nbsp;значення&nbsp;x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x_end&nbsp;(float):&nbsp;Кінцеве&nbsp;значення&nbsp;x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;step&nbsp;(float):&nbsp;Крок&nbsp;зміни&nbsp;x<br>
+&nbsp;<br>
+Повертає:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Список&nbsp;кортежів&nbsp;(x,&nbsp;y),&nbsp;де&nbsp;y&nbsp;-&nbsp;значення&nbsp;функції</span></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><span class="code">Головна&nbsp;функція&nbsp;програми<br>
+Демонструє&nbsp;роботу&nbsp;всіх&nbsp;функцій&nbsp;модуля</span></dd></dl>
+ <dl><dt><a name="-read_from_binary_file"><strong>read_from_binary_file</strong></a>(filename='results.pkl')</dt><dd><span class="code">Читає&nbsp;дані&nbsp;з&nbsp;двійкового&nbsp;файлу&nbsp;(pickle)<br>
+&nbsp;<br>
+Параметри:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filename&nbsp;(str):&nbsp;Ім'я&nbsp;файлу&nbsp;для&nbsp;читання<br>
+&nbsp;<br>
+Повертає:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Список&nbsp;кортежів&nbsp;(x,&nbsp;y)&nbsp;або&nbsp;None&nbsp;при&nbsp;помилці</span></dd></dl>
+ <dl><dt><a name="-read_from_text_file"><strong>read_from_text_file</strong></a>(filename='results.txt')</dt><dd><span class="code">Читає&nbsp;дані&nbsp;з&nbsp;текстового&nbsp;файлу<br>
+&nbsp;<br>
+Параметри:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filename&nbsp;(str):&nbsp;Ім'я&nbsp;файлу&nbsp;для&nbsp;читання<br>
+&nbsp;<br>
+Повертає:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Список&nbsp;кортежів&nbsp;(x,&nbsp;y)&nbsp;або&nbsp;None&nbsp;при&nbsp;помилці</span></dd></dl>
+ <dl><dt><a name="-save_to_binary_file"><strong>save_to_binary_file</strong></a>(data, filename='results.pkl')</dt><dd><span class="code">Зберігає&nbsp;дані&nbsp;у&nbsp;двійковий&nbsp;файл&nbsp;(pickle)<br>
+&nbsp;<br>
+Параметри:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(list):&nbsp;Список&nbsp;кортежів&nbsp;(x,&nbsp;y)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filename&nbsp;(str):&nbsp;Ім'я&nbsp;файлу&nbsp;для&nbsp;збереження</span></dd></dl>
+ <dl><dt><a name="-save_to_text_file"><strong>save_to_text_file</strong></a>(data, filename='results.txt')</dt><dd><span class="code">Зберігає&nbsp;дані&nbsp;у&nbsp;текстовий&nbsp;файл<br>
+&nbsp;<br>
+Параметри:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(list):&nbsp;Список&nbsp;кортежів&nbsp;(x,&nbsp;y)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filename&nbsp;(str):&nbsp;Ім'я&nbsp;файлу&nbsp;для&nbsp;збереження</span></dd></dl>
+</td></tr></table>
+</body></html>
