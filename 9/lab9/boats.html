@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: package boats</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">boats</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnazar%5Conedrive%5C%D1%80%D0%BE%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D1%96%D0%BB%5C%D0%BA%D0%B7%D0%BF%5Csrc%5Cki305%5Ctsehynka%5Clab9%5Cboats%5C__init__.py">c:\users\nazar\onedrive\робочий стіл\кзп\src\ki305\tsehynka\lab9\boats\__init__.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;boats/__init__.py<br>
+#&nbsp;Файл&nbsp;ініціалізації&nbsp;пакета&nbsp;boats<br>
+#&nbsp;Залишається&nbsp;порожнім&nbsp;або&nbsp;може&nbsp;містити&nbsp;імпорти&nbsp;для&nbsp;спрощення&nbsp;доступу</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Package Contents</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="boats.motorboat.html">motorboat</a><br>
+</td><td class="multicolumn"><a href="boats.rowboat.html">rowboat</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="boats.rowboat.html#Rowboat">boats.rowboat.Rowboat</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="boats.motorboat.html#Motorboat">boats.motorboat.Motorboat</a>
+</dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Motorboat">class <strong>Motorboat</strong></a>(<a href="boats.rowboat.html#Rowboat">boats.rowboat.Rowboat</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Motorboat">Motorboat</a>(length_m:&nbsp;float,&nbsp;max_passengers:&nbsp;int,&nbsp;engine_power_hp:&nbsp;int)<br>
+&nbsp;<br>
+Похідний&nbsp;клас,&nbsp;що&nbsp;представляє&nbsp;моторний&nbsp;човен.<br>
+Успадковує&nbsp;від&nbsp;<a href="#Rowboat">Rowboat</a>&nbsp;і&nbsp;додає&nbsp;функціонал&nbsp;двигуна.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="boats.motorboat.html#Motorboat">Motorboat</a></dd>
+<dd><a href="boats.rowboat.html#Rowboat">boats.rowboat.Rowboat</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Motorboat-__init__"><strong>__init__</strong></a>(self, length_m: float, max_passengers: int, engine_power_hp: int)</dt><dd><span class="code">Конструктор&nbsp;класу&nbsp;<a href="#Motorboat">Motorboat</a>.<br>
+&nbsp;<br>
+:param&nbsp;length_m:&nbsp;Довжина&nbsp;човна&nbsp;в&nbsp;метрах.<br>
+:param&nbsp;max_passengers:&nbsp;Максимальна&nbsp;кількість&nbsp;пасажирів.<br>
+:param&nbsp;engine_power_hp:&nbsp;Потужність&nbsp;двигуна&nbsp;в&nbsp;кінських&nbsp;силах&nbsp;(к.с.).</span></dd></dl>
+
+<dl><dt><a name="Motorboat-get_info"><strong>get_info</strong></a>(self) -&gt; str</dt><dd><span class="code">Повертає&nbsp;повну&nbsp;інформацію&nbsp;про&nbsp;моторний&nbsp;човен.</span></dd></dl>
+
+<dl><dt><a name="Motorboat-start_engine"><strong>start_engine</strong></a>(self)</dt><dd><span class="code">Запустити&nbsp;двигун.</span></dd></dl>
+
+<dl><dt><a name="Motorboat-stop_engine"><strong>stop_engine</strong></a>(self)</dt><dd><span class="code">Зупинити&nbsp;двигун.</span></dd></dl>
+
+<dl><dt><a name="Motorboat-throttle_up"><strong>throttle_up</strong></a>(self, speed_kmh: float)</dt><dd><span class="code">Збільшити&nbsp;оберти&nbsp;двигуна/швидкість&nbsp;човна.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="boats.rowboat.html#Rowboat">boats.rowboat.Rowboat</a>:<br>
+<dl><dt><a name="Motorboat-__str__"><strong>__str__</strong></a>(self)</dt><dd><span class="code">Рядкове&nbsp;представлення&nbsp;об'єкта.</span></dd></dl>
+
+<dl><dt><a name="Motorboat-anchor_down"><strong>anchor_down</strong></a>(self)</dt><dd><span class="code">Опустити&nbsp;якір,&nbsp;зупиняючи&nbsp;рух.</span></dd></dl>
+
+<dl><dt><a name="Motorboat-anchor_up"><strong>anchor_up</strong></a>(self)</dt><dd><span class="code">Підняти&nbsp;якір,&nbsp;готуючись&nbsp;до&nbsp;руху.</span></dd></dl>
+
+<dl><dt><a name="Motorboat-row"><strong>row</strong></a>(self)</dt><dd><span class="code">Імітує&nbsp;процес&nbsp;веслування.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="boats.rowboat.html#Rowboat">boats.rowboat.Rowboat</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Rowboat">class <strong>Rowboat</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Rowboat">Rowboat</a>(length_m:&nbsp;float,&nbsp;max_passengers:&nbsp;int)<br>
+&nbsp;<br>
+Базовий&nbsp;клас,&nbsp;що&nbsp;представляє&nbsp;шлюпку&nbsp;на&nbsp;веслах.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Rowboat-__init__"><strong>__init__</strong></a>(self, length_m: float, max_passengers: int)</dt><dd><span class="code">Конструктор&nbsp;класу&nbsp;<a href="#Rowboat">Rowboat</a>.<br>
+&nbsp;<br>
+:param&nbsp;length_m:&nbsp;Довжина&nbsp;шлюпки&nbsp;в&nbsp;метрах.<br>
+:param&nbsp;max_passengers:&nbsp;Максимальна&nbsp;кількість&nbsp;пасажирів.</span></dd></dl>
+
+<dl><dt><a name="Rowboat-__str__"><strong>__str__</strong></a>(self)</dt><dd><span class="code">Рядкове&nbsp;представлення&nbsp;об'єкта.</span></dd></dl>
+
+<dl><dt><a name="Rowboat-anchor_down"><strong>anchor_down</strong></a>(self)</dt><dd><span class="code">Опустити&nbsp;якір,&nbsp;зупиняючи&nbsp;рух.</span></dd></dl>
+
+<dl><dt><a name="Rowboat-anchor_up"><strong>anchor_up</strong></a>(self)</dt><dd><span class="code">Підняти&nbsp;якір,&nbsp;готуючись&nbsp;до&nbsp;руху.</span></dd></dl>
+
+<dl><dt><a name="Rowboat-get_info"><strong>get_info</strong></a>(self) -&gt; str</dt><dd><span class="code">Повертає&nbsp;загальну&nbsp;інформацію&nbsp;про&nbsp;шлюпку.</span></dd></dl>
+
+<dl><dt><a name="Rowboat-row"><strong>row</strong></a>(self)</dt><dd><span class="code">Імітує&nbsp;процес&nbsp;веслування.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>__all__</strong> = ['Rowboat', 'Motorboat']</td></tr></table>
+</body></html>
